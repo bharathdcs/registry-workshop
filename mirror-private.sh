@@ -1,5 +1,4 @@
-cd ~/cpd-cli-linux-EE-13.1.3-98/
-
+export CPD_CLI_MANAGE_WORKSPACE=~/green/cpd-cli-workspace
 export HOSTNAME=`hostname`
 export PRIVATE_REGISTRY_LOCATION="${HOSTNAME}:5000"
 export PRIVATE_REGISTRY_PUSH_USER=admin
@@ -22,4 +21,5 @@ cpd-cli manage mirror-images \
 --target_registry=${PRIVATE_REGISTRY_LOCATION} \
 --arch=${IMAGE_ARCH} \
 --case_download=false
+
 
