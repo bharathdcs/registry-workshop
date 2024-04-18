@@ -1,6 +1,6 @@
 echo "stop and remove the olm-utils image"
 sleep 10
-podman rmi olm-utils-play-v2 --force
+podman rmi icr.io/cpopen/cpd/olm-utils-v2:latest --force
 
 cd ~/cpd-cli-linux-EE-13.1.3-98
 
