@@ -26,5 +26,7 @@ export REGISTRY_PASSWORD="passw0rd"
 
 podman run --name mirror-registry --publish $REGISTRY_PORT:5000 --detach --volume /opt/registry/data:/var/lib/registry:z --volume /opt/registry/auth:/auth:z --volume /opt/registry/certs:/certs:z --env "REGISTRY_AUTH=htpasswd" --env "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" --env REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd --env REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt --env REGISTRY_HTTP_TLS_KEY=/certs/domain.key quay.io/bkdevara/registry:2
 
+sleep 20
+echo "Test whether the registry is accessible"
 curl -kvv https://$REGISTRY_SERVER:5000/v2/_catalog
 
