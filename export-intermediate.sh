@@ -8,7 +8,7 @@ tar -czvf ~/cpd-cli-workspace.tar.gz cpd-cli-workspace
 
 export PATH=~/cpd-cli-linux-EE-13.1.3-98/:$PATH
 
-#rm -rf ~/cpd-cli-linux-EE-13.1.3-98/cpd-cli-workspace
+rm -rf ~/cpd-cli-linux-EE-13.1.3-98/cpd-cli-workspace
 
 echo "Lets simulate moving the workspace to a green zone" 
 echo ".................."
