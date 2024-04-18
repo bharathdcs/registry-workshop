@@ -1,1 +1,1 @@
-# registry-workshop
+# Intermediate-Registry
