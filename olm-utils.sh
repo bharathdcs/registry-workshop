@@ -19,6 +19,7 @@ export COMPONENTS=cpd_platform
 export VERSION=4.8.1
 export IMAGE_ARCH=amd64
 
+cd ~/cpd-cli-linux-EE-13.1.3-98/
 export CPD_CLI_MANAGE_WORKSPACE=`pwd`
 
 echo "Logging into registry"
