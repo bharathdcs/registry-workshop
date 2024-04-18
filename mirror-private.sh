@@ -3,6 +3,7 @@ export HOSTNAME=`hostname`
 export PRIVATE_REGISTRY_LOCATION="${HOSTNAME}:5000"
 export PRIVATE_REGISTRY_PUSH_USER=admin
 export PRIVATE_REGISTRY_PUSH_PASSWORD=passw0rd
+export PATH=~/cpd-cli-linux-EE-13.1.3-98/:$PATH
 
 echo "Logging into the private registry"
 sleep 20
