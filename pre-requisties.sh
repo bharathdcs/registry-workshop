@@ -5,7 +5,13 @@ dnf -y install podman
 dnf -y install httpd-tools
 dnf -y install git
 
-echo "Preparing your priavte registry...."
+echo "Clean up the previous attempts if already exists"
+podman rmi icr.io/cpopen/cpd/olm-utils-v2:latest --force
+podman rmi quay.io/bkdevara/registry:2 --force
+
+rm -vrf /opt/registry
+
+echo "Preparing your private registry...."
 sleep 20
 podman pull quay.io/bkdevara/registry:2 
 
