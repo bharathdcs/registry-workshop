@@ -14,5 +14,9 @@ sleep 10
 mkdir ~/green
 tar -xzvf ~/cpd-cli-workspace.tar.gz -C ~/green
 
+export CPD_CLI_MANAGE_WORKSPACE=~/green/cpd-cli-workspace
+
+
+
 
 
