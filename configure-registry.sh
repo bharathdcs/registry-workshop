@@ -5,8 +5,6 @@ dnf -y install podman
 dnf -y install httpd-tools
 dnf -y install git
 
-git repo clone bharathdcs/registry-workshop
-
 echo "Preparing your priavte registry...."
 sleep 20
 podman pull quay.io/bkdevara/registry:2 
