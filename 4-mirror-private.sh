@@ -1,4 +1,4 @@
-export CPD_CLI_MANAGE_WORKSPACE=~/green/cpd-cli-workspace
+export CPD_CLI_MANAGE_WORKSPACE=~/green/cpd-cli-workspace/olm-utils-workspace
 export HOSTNAME=`hostname`
 export PRIVATE_REGISTRY_LOCATION="${HOSTNAME}:5000"
 export PRIVATE_REGISTRY_PUSH_USER=admin
