@@ -16,7 +16,7 @@ tar -xzvf cpd-cli-linux-EE-13.1.4.tgz -C ~
 export PATH=~/cpd-cli-linux-EE-13.1.4-109/:$PATH
 export IBM_ENTITLEMENT_KEY=$KEY
 export COMPONENTS=cpd_platform
-export VERSION=4.8.1
+export VERSION=4.8.4
 export IMAGE_ARCH=amd64
 
 cd ~/cpd-cli-linux-EE-13.1.4-109/
