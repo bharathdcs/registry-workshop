@@ -18,3 +18,5 @@ rm -rf ~/cpd-cli-linux-EE-13.1.4-109/cpd-cli-workspace
 echo "Lets simulate moving the workspace to a green zone" 
 echo ".................."
 sleep 10
+
+tar -xzvf ~/cpd-cli-workspace.tar.gz -C ~/green
