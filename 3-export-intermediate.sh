@@ -2,6 +2,8 @@ echo "Exporting the workspace"
 mkdir ~/green
 cd ~/cpd-cli-linux-EE-13.1.4-109
 
+pwd
+
 tar -czvf ~/cpd-cli-workspace.tar.gz cpd-cli-workspace
 
 echo "stop and remove the olm-utils image"
