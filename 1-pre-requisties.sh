@@ -10,7 +10,7 @@ podman rmi icr.io/cpopen/cpd/olm-utils-v2:latest --force
 podman rmi quay.io/bkdevara/registry:2 --force
 rm -vrf /opt/registry
 rm -rvf ~/green
-rm -rvf ~/cpd-cli-linux-EE-13.1.3-98
+rm -rvf ~/cpd-cli-linux-EE*
 rm -rvf ~/cpd-cli-workspace.tar.gz
 
 echo "Preparing your private registry...."
