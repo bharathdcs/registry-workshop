@@ -3,7 +3,7 @@ cd ~/cpd-cli-linux-EE-13.1.4-109
 mkdir ~/green
 export CPD_CLI_MANAGE_WORKSPACE=~/green/cpd-cli-workspace
 
-tar -czvf ~/cpd-cli-workspace.tar.gz cpd-cli-workspace
+tar -czvf ~/cpd-cli-workspace.tar.gz ~/cpd-cli-linux-EE-13.1.4-109/cpd-cli-workspace
 
 echo "stop and remove the olm-utils image"
 sleep 10
