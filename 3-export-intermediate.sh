@@ -1,10 +1,11 @@
 echo "stop and remove the olm-utils image"
 sleep 10
-podman rmi icr.io/cpopen/cpd/olm-utils-v2:latest --force
 
 cd ~/cpd-cli-linux-EE-13.1.3-98
 
 tar -czvf ~/cpd-cli-workspace.tar.gz cpd-cli-workspace
+
+podman rmi icr.io/cpopen/cpd/olm-utils-v2:latest --force
 
 export PATH=~/cpd-cli-linux-EE-13.1.3-98/:$PATH
 
