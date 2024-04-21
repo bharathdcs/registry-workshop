@@ -6,20 +6,20 @@ KEY=$1
 
 echo "Downloading the cpd-cli utility ---"
 
-wget -v https://github.com/IBM/cpd-cli/releases/download/v13.1.3/cpd-cli-linux-EE-13.1.3.tgz
+wget -v https://github.com/IBM/cpd-cli/releases/download/v13.1.4/cpd-cli-linux-EE-13.1.4.tgz
 
 sleep 10
 
-tar -xzvf cpd-cli-linux-EE-13.1.3.tgz -C ~
+tar -xzvf cpd-cli-linux-EE-13.1.4.tgz -C ~
 
 
-export PATH=~/cpd-cli-linux-EE-13.1.3-98/:$PATH
+export PATH=~/cpd-cli-linux-EE-13.1.4-109/:$PATH
 export IBM_ENTITLEMENT_KEY=$KEY
 export COMPONENTS=cpd_platform
 export VERSION=4.8.1
 export IMAGE_ARCH=amd64
 
-cd ~/cpd-cli-linux-EE-13.1.3-98/
+cd ~/cpd-cli-linux-EE-13.1.4-109/
 
 echo "Logging into registry"
 
