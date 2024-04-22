@@ -1,0 +1,43 @@
+Intermediate Registry Runbook
+
+
+Pre-requisites
+
+•	Provision a Linux server on fyre, preferably RHEL 8 server.
+•	We don’t need an OpenShift server for this exercise.
+•	Login to your server as root user
+•	Install git client if its missing – 
+        dnf -y install git
+•	Clone the repository.
+o	git clone https://github.com/bharathdcs/registry-workshop
+•	Be prepared with your IBM Entitlement key, we will be using for mirroring operation.
+
+Mirror images to intermediate registry
+
+
+•	Make the scripts executable – chmod 777 registry-workshop/*.  
+•	Run the ./1-pre-requisties.sh to install the dependencies.
+•	Prepare your intermediate registry and mirror images by running the following script -
+       ./2-intermediate-registry.sh <entitlement key> , pass your entitlement key as an argument.
+•	Test whether images were mirrored successfully, by logging into olm-utils pod and validating an image.
+•	podman exec -it olm-utils-play-v2 /bin/bash
+•	oc image info 127.0.0.1:12443/cpopen/ibm-cpd-platform-operator-bundle:5.4.0-13 --insecure=true
+
+
+Move your registry to green zone.
+
+•	Now lets simulate moving the intermediate images to green zone, run the following script - ./3-export-intermediate.sh
+•	This script will compress cpd-cli-workspace directory and move it to a new directory called green. Both the compressed workspace and green directory can be found inside your $HOME directory.
+•	In the subsequent mirror operation, we’ll be using the green directory as our source for images.
+
+Mirror images intermediate to final registry.
+
+•	Perform the final mirror operation by executing the following script – 
+•	./4-mirror-private.sh
+•	The script has following variable set to use the green directory as the new workspace, CPD_CLI_MANAGE_WORKSPACE=~/green/cpd-cli-workspace/olm-utils-workspace
+•	Try pulling an image from your private registry to confirm whether the mirror operation succeeded
+•	podman login --username "admin" --password "passw0rd" $(hostname):5000 --tls-verify=false 
+•	podman pull $(hostname):5000/cpopen/ibm-cpd-platform-operator-bundle:5.4.0-13 –tls-verify=false
+
+
+
