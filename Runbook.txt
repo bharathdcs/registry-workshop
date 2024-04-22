@@ -1,7 +1,7 @@
 Intermediate Registry Runbook
 
 
-Pre-requisites
+1. Pre-requisites
 
 •	Provision a Linux server on fyre, preferably RHEL 8 server.
 •	We don’t need an OpenShift server for this exercise.
@@ -12,7 +12,7 @@ Pre-requisites
 	        git clone https://github.com/bharathdcs/registry-workshop
 •	Be prepared with your IBM Entitlement key, we will be using for mirroring operation.
 
-Mirror images to intermediate registry
+2. Mirror images to intermediate registry
 
 
 •	Make the scripts executable – chmod 777 registry-workshop/*.  
@@ -24,14 +24,14 @@ Mirror images to intermediate registry
 	        oc image info 127.0.0.1:12443/cpopen/ibm-cpd-platform-operator-bundle:5.4.0-13 --insecure=true
 
 
-Move your registry to green zone.
+3. Move your registry to green zone.
 
 •	Now lets simulate moving the intermediate images to green zone, run the following script - 
         ./3-export-intermediate.sh
 •	This script will compress cpd-cli-workspace directory and move it to a new directory called green. Both the compressed workspace and green directory can be found inside your $HOME directory.
 •	In the subsequent mirror operation, we’ll be using the green directory as our source for images.
 
-Mirror images intermediate to final registry.
+4. Mirror images intermediate to final registry.
 
 •	Perform the final mirror operation by executing the following script – 
 	        ./4-mirror-private.sh
