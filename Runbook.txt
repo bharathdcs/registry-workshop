@@ -38,7 +38,7 @@ Intermediate Registry Runbook
 •	The script has set the CPD_CLI_MANAGE_WORKSPACE variable to point to the green directory as the new workspace.
 •	Try pulling an image from your private registry to confirm whether the mirror operation succeeded
 	        podman login --username "admin" --password "passw0rd" $(hostname):5000 --tls-verify=false 
-	        podman pull $(hostname):5000/cpopen/ibm-cpd-platform-operator-bundle:5.4.0-13 –tls-verify=false
+	        podman pull $(hostname):5000/cpopen/ibm-cpd-platform-operator-bundle:5.4.0-13 --tls-verify=false
 
 
 
