@@ -35,7 +35,7 @@ Intermediate Registry Runbook
 
 •	Perform the final mirror operation by executing the following script – 
 	        ./4-mirror-private.sh
-•	The script has following variable set to use the green directory as the new workspace, CPD_CLI_MANAGE_WORKSPACE=~/green/cpd-cli-workspace/olm-utils-workspace
+•	The script has set the CPD_CLI_MANAGE_WORKSPACE variable to point to the green directory as the new workspace.
 •	Try pulling an image from your private registry to confirm whether the mirror operation succeeded
 	        podman login --username "admin" --password "passw0rd" $(hostname):5000 --tls-verify=false 
 	        podman pull $(hostname):5000/cpopen/ibm-cpd-platform-operator-bundle:5.4.0-13 –tls-verify=false
