@@ -36,5 +36,5 @@ podman run --name mirror-registry --publish $REGISTRY_PORT:5000 --detach --volum
 
 sleep 20
 echo "Test whether the registry is accessible"
-curl -kvv -u admin:passw0rd https://$REGISTRY_SERVER:5000/v2/_catalog
+curl -kvv -u $REGISTRY_USER:$REGISTRY_PASSWORD https://$REGISTRY_SERVER:5000/v2/_catalog
 
