@@ -1,0 +1,1 @@
+podman run -d localhost/samplecontainer:latest
