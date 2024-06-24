@@ -1,0 +1,1 @@
+curl -k -u $REGISTRY_USER:$REGISTRY_PASSWORD https://$REGISTRY_SERVER:5000/v2/_catalog
